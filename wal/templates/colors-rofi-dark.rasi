@@ -1,0 +1,11 @@
+/* colors */
+
+* {{
+
+    al: #00000000;
+    bg: {background}FF;
+    ac: {color1}FF;
+    se: {color1}26;
+    fg: {foreground}FF;
+
+}}

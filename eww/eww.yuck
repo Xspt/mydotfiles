@@ -1,0 +1,64 @@
+(defpoll plause :interval "1s"
+               `~/.config/eww/scripts/player.sh status`)
+
+(defpoll imageart :interval "1s"
+                  `~/.config/eww/scripts/player.sh image`)
+
+(defpoll artist :interval "1s"
+                `~/.config/eww/scripts/player.sh artist`)
+
+(defpoll song :interval "1s"
+                `~/.config/eww/scripts/player.sh song`)
+
+(defwidget infos []
+     (label :text "incoming"))
+
+(defwidget media []
+    (box :class "mainbox"
+         :orientation "vertical"
+         :halign "center"
+         :valign "center"
+         :space-evenly "false"
+
+         (box :class "imagem"
+               :style "background-image: url('${imageart}');"
+               :halign "center")
+
+          (label :class "texto1"
+               :halign "center"
+               :text "${song}"
+               :wrap "true")
+
+          (label :class "texto2"
+               :halign "center"
+               :text "${artist}"
+               :wrap "true")
+
+         (box :orientation "horizontal"
+              :halign "center"
+              :valign "end"
+              :hexpand false
+              :vexpand false
+              (button :class "esquerda" :onclick "playerctl -p firefox previous" "玲")
+              (button :onclick "playerctl -p firefox play-pause" plause)
+              (button :class "direita" :onclick "playerctl -p firefox next" "怜"))))
+
+(defwindow player
+     :monitor 0
+     :geometry (geometry :x "0%"
+                        :y "44px"
+                        :width "20%"
+                        :height "30%"
+                        :anchor "top center")
+    :stacking "fg"
+(media))
+
+(defwindow info
+     :monitor 1
+     :geometry (geometry :x "4%"
+                         :y "44px"
+                         :width "18%"
+                         :height "30%"
+                         :anchor "top left")
+     :stacking "fg"
+(infos))
