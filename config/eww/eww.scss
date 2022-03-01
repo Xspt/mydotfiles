@@ -1,0 +1,217 @@
+@import '/home/xspt/.cache/wal/colors.scss';
+
+* {
+    all: unset;
+}
+
+// ------------------------------------------
+
+.player {
+    padding: 10px;
+    background-color: $background;
+    border: 2px solid $foreground;
+    border-radius: 20px;
+}
+
+.childbox {
+    min-width: 200px;
+    min-height: 150px;
+}
+
+.imagem{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-right: 10px;
+
+    border-radius: 10px;
+
+    min-width: 150px;
+    min-height: 150px;
+
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+.texto1 {
+    font: 18px "mononoki Nerd Font Mono";
+    color: $color4;
+    text-shadow: black 1px 1px 2px;
+}
+
+.texto2 {
+    font: 15px "GohuFont Nerd Font";
+    color: $color3;
+    margin-bottom: 5px;
+    text-shadow: black 1px 1px 2px;
+}
+
+.childbox button {
+    font: 35px "GohuFont Nerd Font";
+    color: $foreground;
+    text-shadow: black 1px 1px 2px;
+}
+
+.childbox button:hover {
+    color: darken($color: $foreground, $amount: 15%);
+}
+
+.meio {
+    padding-right: 8px;
+}
+
+// ------------------------------------------
+
+.sliders {
+    padding: 10px;
+    background-color: $background;
+    border: 2px solid $foreground;
+    border-radius: 15px;
+}
+
+.sliders-box box scale trough{
+    min-width: 200px;
+    min-height: 10px;
+    background-color: $color8;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.sliders-box box scale trough highlight {
+    border-radius: 20px;
+}
+
+.sliders-box box box, button {
+    font: 25px "GohuFont Nerd Font";
+}
+
+.values {
+    font: 20px "mononoki Nerd Font Mono";
+    color: $foreground;
+}
+
+// ------------------------------------------
+
+.sound {
+    margin-bottom: 5px;
+}
+
+.sound scale trough highlight {
+    background-color: $color2;
+}
+
+.sound-label {
+    color: $color2;
+}
+
+.sound-label:hover {
+    color: darken($color: $color2, $amount: 15%);
+}
+
+// ------------------------------------------
+
+.ram {
+    margin-bottom: 5px;
+}
+
+.ram scale trough highlight {
+    background-color: $color6;
+}
+
+.ram-label {
+    color: $color6;
+}
+
+// ------------------------------------------
+
+.cpu {
+    margin-bottom: 5px;
+}
+
+.cpu scale trough highlight {
+    background-color: $color5;
+}
+
+.cpu-label {
+    color: $color5;
+}
+
+// ------------------------------------------
+
+.disk scale trough highlight {
+    background-color: $color3;
+}
+
+.disk-label {
+    color: $color3;
+}
+
+// ------------------------------------------
+
+.datetime {
+    min-width: 272px;
+    padding: 10px;
+    background-color: $background;
+    border: 2px solid $foreground;
+    border-radius: 15px;
+}
+
+.hour {
+    font: 50px "mononoki Nerd Font Mono";
+    color: $color6;
+    text-shadow: black 2px 2px 3px;
+}
+
+.day {
+    font: 18px "Iosevka Nerd Font";
+    color: $color1;
+    text-shadow: black 1px 1px 1px;
+}
+
+// ------------------------------------------
+
+.powermenu {
+    min-width: 272px;
+    padding: 10px;
+    background-color: $background;
+    border: 2px solid $foreground;
+    border-radius: 15px;
+}
+
+.powermenu button {
+    // background-color: $color8;
+    border-radius: 10px;
+}
+
+.shutdown {
+    background-color: $color1;
+    padding: 10px;
+    padding-right: 15px;
+    text-shadow: black 1px 1px 1px;
+}
+
+.shutdown:hover {
+    background-color: darken($color: $color1, $amount: 15%);
+}
+
+.reboot {
+    padding: 10px;
+    background-color: $color5;
+    text-shadow: black 1px 1px 1px;
+}
+
+.reboot:hover {
+    background-color: darken($color: $color5, $amount: 15%);
+}
+
+.quit {
+    background-color: $color4;
+    padding: 10px;
+    padding-right: 15px;
+    text-shadow: black 1px 1px 1px;
+}
+
+.quit:hover {
+    background-color: darken($color: $color4, $amount: 15%);
+}

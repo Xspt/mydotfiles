@@ -1,0 +1,85 @@
+(include "variables.yuck")
+
+(defwidget media []
+    (box :class "mainbox"
+        :orientation "horizontal"
+        :halign "center"
+        :valign "center"
+        :space-evenly false
+
+            (box :class "imagem"
+                :style "background-image: url('${imageart}');"
+                :halign "center"
+            )
+
+            (centerbox :class "childbox"
+                :orientation "vertical"
+
+                    (label :class "texto1"
+                        :halign "center"
+                        :valign "center"
+                        :text "${song}"
+                        :limit-width 18
+                    )
+
+                    (label :class "texto2"
+                        :halign "center"
+                        :valign "center"
+                        :text "${artist}"
+                        :limit-width 19
+                    )
+
+                    (centerbox :orientation "horizontal"
+                        :valign "center"
+                            (button :valign "center" :halign "center" :onclick "playerctl -p firefox previous" "玲")
+                            (button :valign "center" :halign "center" :class "meio" :onclick "playerctl -p firefox play-pause" plause)
+                            (button :valign "center" :halign "center" :onclick "playerctl -p firefox next" "怜")
+                    )
+            )
+    )
+)
+
+(defwidget sliders []
+    (box :class "sliders-box" :orientation "vertical" :space-evenly false
+
+        (box :orientation "h" :class "sound" :space-evenly false :halign "center"
+            (button :class "sound-label" :onclick "amixer -D pulse sset Master toggle" "${is_muted}")
+            (scale :min 0 :max 101 :value {volume} :onchange "amixer -D pulse sset Master {}%")
+            (label :class "values" :text "${volume}%")
+        )
+
+        (box :orientation "h" :class "ram" :space-evenly false :halign "center"
+            (box :class "ram-label" "龍")
+            (scale :min 0 :max 101 :value {EWW_RAM.used_mem_perc})
+            (label :class "values" :text "${round(EWW_RAM.used_mem_perc, 0)}%")
+        )
+
+        (box :orientation "h" :class "cpu" :space-evenly false :halign "center"
+            (box :class "cpu-label" "")
+            (scale :min 0 :max 101 :value {EWW_CPU.avg})
+            (label :class "values" :text "${round(EWW_CPU.avg, 0)}%")
+        )
+
+        (box :orientation "h" :class "disk" :space-evenly false :halign "center"
+            (box :class "disk-label" "")
+            (scale :min 0 :max 101 :value {EWW_DISK["/"].used_perc})
+            (label :class "values" :text "${round(EWW_DISK["/"].used_perc, 0)}%")
+        )
+
+    )
+)
+
+(defwidget datetime []
+    (box :orientation "v" :space-evenly false
+        (label :text {hour} :class "hour")
+        (label :text {day} :class "day")
+    )
+)
+
+(defwidget powermenu []
+    (box :valign "center" :halign "center" :spacing 10 :orientation "h" :space-evenly true
+        (button :class "shutdown" :onclick "shutdown now" "")
+        (button :class "reboot" :onclick "reboot now" "ﰇ")
+        (button :class "quit" :onclick "bspc quit" "")
+    )
+)

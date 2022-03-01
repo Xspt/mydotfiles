@@ -1,0 +1,41 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+$HOME/.config/bspwm/scripts/monitores.sh
+
+bspc monitor HDMI-0 -d I II III IV
+bspc monitor VGA-0 -d V VI VII VIII
+
+bspc config border_width        2
+bspc config border_radius       20
+bspc config window_gap          10
+bspc config top_padding 	    40
+
+. "${HOME}/.cache/wal/colors.sh"
+bspc config focused_border_color "$color7"
+bspc config active_border_color "$color0"
+bspc config normal_border_color "$color0"
+
+bspc config focus_follows_pointer true
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp state=floating follow=on
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a discord desktop='^6'
+bspc rule -a Roberto state=floating
+bspc rule -a Farge state=floating
+bspc rule -a scrcpy state=floating
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+xsetroot -cursor_name left_ptr
+nitrogen --restore
+wal -R -n
+eww daemon
+$HOME/.config/polybar/Anenz/launch.sh
+wmname LG3D
+picom

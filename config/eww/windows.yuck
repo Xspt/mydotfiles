@@ -1,0 +1,44 @@
+(include "widgets.yuck")
+
+(defwindow player
+    :monitor 0
+    :geometry (geometry 
+        :x "0%"
+        :y "50px"
+        :width "300px"
+        :height "150px"
+        :anchor "top center")
+    :stacking "fg"
+(media))
+
+(defwindow sliders
+    :monitor 0
+    :geometry (geometry 
+        :x "-10px"
+        :y "50px"
+        ; :width "230px"
+        ; :height "150px"
+        :anchor "top right"
+    )
+    :stacking "fg"    
+(sliders))
+
+(defwindow datetime
+    :monitor 0
+    :geometry (geometry
+        :x "-10px"
+        :y "200px"
+        :anchor "top right"
+    )
+    :stacking "fg"
+(datetime))
+
+(defwindow powermenu
+    :monitor 0
+    :geometry (geometry
+        :x "-10px"
+        :y "311px"
+        :anchor "top right"
+    )
+    :stacking "fg"
+(powermenu))

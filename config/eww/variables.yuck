@@ -1,0 +1,10 @@
+(defpoll plause :interval "100ms" `scripts/player.sh status`)
+(defpoll imageart :interval "1s" `scripts/player.sh image`)
+(defpoll artist :interval "1s" `scripts/player.sh artist`)
+(defpoll song :interval "1s" `scripts/player.sh song`)
+
+(defpoll volume :interval "100ms" `scripts/audio.sh volume`)
+(defpoll is_muted :interval "100ms" `scripts/audio.sh muted`)
+
+(defpoll hour :interval "5s" `date +%H:%M`)
+(defpoll day :interval "1h" `date +%d/%m/%y`)
