@@ -31,4 +31,5 @@ If you want to try these configs be aware that the [install.py](https://github.c
 - Adjust picom shadows
 - Make a better install script
 - Better eww windows positioning
-- Polish the files
+- Polish and comment the config files
+- Workflow gif
