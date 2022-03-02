@@ -5,6 +5,8 @@ It may or may not work in your computer.
 
 You are free to do anything that you want with these files tho.
 
+If you're interested in those kind of things check [r/unixporn](https://www.reddit.com/r/unixporn) for hopefully better made setups.
+
 ## Infos
 - **🪟 Wm:** [Bspwm](https://github.com/baskerville/bspwm)
 - **🍫 Bar:** [Polybar](https://github.com/polybar/polybar)
