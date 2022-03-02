@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias code=vscodium
 
 # PS1='[\u@\h \W]\$ '
-PS1='[\e[0;33m\$\e[0m\u >\e[4;32m\W\e[0;m]: '
+PS1='[\[\e[0;32m\]\$\[\e[0m\]\u \[\e[0;33m\]\W/\[\e[0m\]]: '
 
 (cat ~/.cache/wal/sequences &)
 
