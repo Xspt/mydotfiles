@@ -35,5 +35,5 @@ If you want to try these configs be aware that the [install.py](https://github.c
 - Better eww windows positioning
 - Polish and comment the config files
 - Workflow gif
-- [Scrcpy]('https://github.com/Genymobile/scrcpy') widget
+- [Scrcpy](https://github.com/Genymobile/scrcpy) widget
 - Record screen widget
