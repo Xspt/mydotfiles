@@ -30,10 +30,9 @@ Tiling mode + Custom [browser homepage](https://github.com/Xspt/new-tab)
 If you want to try these configs be aware that the [install.py](https://github.com/Xspt/mydotfiles/blob/main/install.py) script is not 100% reliable, so I recommend you to do your own backup and use the script only to copy the files to ~/.config/
 
 ## TODO
-- Adjust picom shadows
-- Make a better install script
-- Better eww windows positioning
-- Polish and comment the config files
-- Workflow gif
-- [Scrcpy](https://github.com/Genymobile/scrcpy) widget
-- Record screen widget
+- [X] Adjust picom shadows
+- [ ] Make a better install script
+- [ ] Adjust eww windows position
+- [ ] Polish and comment the config files
+- [ ] Add GIF to README
+- [ ] Record screen widget
