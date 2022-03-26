@@ -15,7 +15,7 @@
     :monitor 0
     :geometry (geometry 
         :x "-10px"
-        :y "50px"
+        :y "164px"
         ; :width "230px"
         ; :height "150px"
         :anchor "top right"
@@ -27,7 +27,7 @@
     :monitor 0
     :geometry (geometry
         :x "-10px"
-        :y "200px"
+        :y "50px"
         :anchor "top right"
     )
     :stacking "fg"
@@ -37,7 +37,7 @@
     :monitor 0
     :geometry (geometry
         :x "-10px"
-        :y "311px"
+        :y "317px"
         :anchor "top right"
     )
     :stacking "fg"

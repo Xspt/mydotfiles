@@ -35,7 +35,7 @@
 
 .texto1 {
     font: 18px "mononoki Nerd Font Mono";
-    color: $color4;
+    color: $color7;
     text-shadow: black 1px 1px 2px;
 }
 
@@ -48,16 +48,26 @@
 
 .childbox button {
     font: 35px "GohuFont Nerd Font";
-    color: $foreground;
     text-shadow: black 1px 1px 2px;
-}
-
-.childbox button:hover {
-    color: darken($color: $foreground, $amount: 15%);
+    transition: font-size .1s ease-in-out; 
 }
 
 .meio {
+    color: $color6;
     padding-right: 8px;
+}
+.meio:active, .previous:active, .next:active {
+    font-size: 30px;
+}
+.meio:hover {
+    color: darken($color: $color6, $amount: 15%);
+}
+
+.previous, .next {
+    color: $color7;
+}
+.previous:hover, .next:hover {
+    color: darken($color: $color7, $amount: 15%);
 }
 
 // ------------------------------------------
@@ -67,6 +77,7 @@
     background-color: $background;
     border: 2px solid $foreground;
     border-radius: 15px;
+    min-width: 285px;
 }
 
 .sliders-box box scale trough{
@@ -108,7 +119,6 @@
 .sound-label:hover {
     color: darken($color: $color2, $amount: 15%);
 }
-
 // ------------------------------------------
 
 .ram {
@@ -150,7 +160,7 @@
 // ------------------------------------------
 
 .datetime {
-    min-width: 272px;
+    min-width: 285px;
     padding: 10px;
     background-color: $background;
     border: 2px solid $foreground;
@@ -159,20 +169,20 @@
 
 .hour {
     font: 50px "mononoki Nerd Font Mono";
-    color: $color6;
+    color: $color7;
     text-shadow: black 2px 2px 3px;
 }
 
 .day {
     font: 18px "Iosevka Nerd Font";
-    color: $color1;
+    color: $color4;
     text-shadow: black 1px 1px 1px;
 }
 
 // ------------------------------------------
 
 .powermenu {
-    min-width: 272px;
+    min-width: 285px;
     padding: 10px;
     background-color: $background;
     border: 2px solid $foreground;
@@ -180,15 +190,17 @@
 }
 
 .powermenu button {
-    // background-color: $color8;
+    color: $color7;
+    text-shadow: black 0px 0px 2px;
     border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px rgba($color: #000000, $alpha: 0.5);
 }
 
 .shutdown {
-    background-color: $color1;
+    // background-color: $color1;
+    background-color: $color8;
     padding: 10px;
     padding-right: 15px;
-    text-shadow: black 1px 1px 1px;
 }
 
 .shutdown:hover {
@@ -197,21 +209,21 @@
 
 .reboot {
     padding: 10px;
-    background-color: $color5;
-    text-shadow: black 1px 1px 1px;
+    // background-color: $color3;
+    background-color: $color8;
 }
 
 .reboot:hover {
-    background-color: darken($color: $color5, $amount: 15%);
+    background-color: darken($color: $color3, $amount: 15%);
 }
 
 .quit {
-    background-color: $color4;
+    // background-color: $color2;
+    background-color: $color8;
     padding: 10px;
     padding-right: 15px;
-    text-shadow: black 1px 1px 1px;
 }
 
 .quit:hover {
-    background-color: darken($color: $color4, $amount: 15%);
+    background-color: darken($color: $color2, $amount: 15%);
 }

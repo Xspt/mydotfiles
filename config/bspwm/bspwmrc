@@ -30,6 +30,8 @@ bspc rule -a discord desktop='^6'
 bspc rule -a Roberto state=floating
 bspc rule -a Farge state=floating
 bspc rule -a scrcpy state=floating
+bspc rule -a '*:*:Picture-in-Picture' state=floating
+bspc rule -a spotify state=tiling
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 xsetroot -cursor_name left_ptr

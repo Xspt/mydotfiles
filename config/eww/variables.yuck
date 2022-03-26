@@ -7,4 +7,5 @@
 (defpoll is_muted :interval "100ms" `scripts/audio.sh muted`)
 
 (defpoll hour :interval "5s" `date +%H:%M`)
-(defpoll day :interval "1h" `date +%d/%m/%y`)
+; (defpoll day :interval "1h" `date +%d/%m/%y`)
+(defpoll day :interval "1h" `date +%a" "%d" de "%B`)

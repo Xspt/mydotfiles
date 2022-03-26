@@ -7,6 +7,7 @@
 
 alias ls='ls --color=auto'
 alias code=vscodium
+alias cava='cava -p ~/.cache/wal/cava-config'
 
 # PS1='[\u@\h \W]\$ '
 PS1='[\[\e[0;32m\]\$\[\e[0m\]\u \[\e[0;33m\]\W/\[\e[0m\]]: '

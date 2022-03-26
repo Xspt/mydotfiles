@@ -5,10 +5,12 @@ str2="status"
 str3="artist"
 str4="song"
 
-status=$(playerctl -p firefox status)
-image=$(playerctl -p firefox metadata | grep artUrl)
-artist=$(playerctl -p firefox metadata --format {{artist}})
-song=$(playerctl -p firefox metadata --format {{title}})
+player="spotify"
+
+status=$(playerctl -p $player status)
+image=$(playerctl -p $player metadata | grep artUrl)
+artist=$(playerctl -p $player metadata --format {{artist}})
+song=$(playerctl -p $player metadata --format {{title}})
 
 
 show_status(){
