@@ -36,7 +36,3 @@ If you want to try these configs be aware that the [install.py](https://github.c
 
 - [ ] Make a better install script
 - [ ] Polish and comment the config files
-- [ ] Record screen widget
-- [X] Add GIF to README
-- [X] Adjust picom shadows
-- [X] Adjust eww windows position
